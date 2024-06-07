@@ -10,7 +10,7 @@ import { RiLogoutCircleRLine } from "react-icons/ri";
 
 const LeftSidebar = () => {
   return (
-    <div className="">
+    <div className=" w-[25%]">
         <div>
             <img className="ml-2" width={"45px"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT56Gnsv1-VbZYG78iHjLogURyJBAs_9m7ESQ&s" alt="twitter-logo" />
         </div>
@@ -49,7 +49,7 @@ const LeftSidebar = () => {
                 <h4 className="font-bold">Logout</h4>
             </div>
 
-            <button className=" text-white font-semibold w-full py-2 rounded-full hover:scale-95 transition-all duration-300 bg-blue-600">Post</button>
+            <button className=" text-white font-semibold w-8/12 py-2 rounded-full hover:scale-95 transition-all duration-300 bg-blue-600">Post</button>
             
         </div>
     </div>
