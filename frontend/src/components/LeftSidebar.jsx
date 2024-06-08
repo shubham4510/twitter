@@ -10,12 +10,12 @@ import { RiLogoutCircleRLine } from "react-icons/ri";
 
 const LeftSidebar = () => {
   return (
-    <div className=" w-[25%]">
+    <div className=" h-screen sticky top-0 left-0 w-[20%]">
         <div>
             <img className="ml-2" width={"45px"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT56Gnsv1-VbZYG78iHjLogURyJBAs_9m7ESQ&s" alt="twitter-logo" />
         </div>
 
-        <div>
+        <div className="">
             <div className="flex items-center cursor-pointer gap-2 my-2 py-2 px-4  hover:bg-gray-300 rounded-full">
                 <CiHome size={30}/>
                 <h4 className="font-bold">Home</h4>

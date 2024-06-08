@@ -1,7 +1,6 @@
 import Avatar from "react-avatar";
 import { CiImageOn } from "react-icons/ci";
 
-
 const CreatePost = () => {
   return (
     <div className="  border-[1px] border-gray-300">
@@ -21,7 +20,7 @@ const CreatePost = () => {
           <div>
             <Avatar
               className=" rounded-full"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm7MUANej77UsPeJYcyuPd46KXyeuwi8m5yw&s"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCga-xdtUg1fK-RWZ_pOcouzCbVPCt72v_Zg&s"
               twitterHandle="sitebase"
               size="40"
             />
@@ -34,7 +33,7 @@ const CreatePost = () => {
         </div>
         <div className="flex justify-between p-5 border-b border-gray-300b">
           <div>
-            <CiImageOn size={40}/>
+            <CiImageOn size={40} />
           </div>
           <button className=" bg-blue-600 px-4 py-1 rounded-full text-white border-none outline-none hover:scale-95 transition-all duration-300">
             Post
