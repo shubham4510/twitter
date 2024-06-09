@@ -1,10 +1,10 @@
-import Home from "./components/Home"
+import Body from "./components/Body"
 import './App.css'
 
 const App = () => {
   return (
     <div className="">
-      <Home/>
+      <Body/>
     </div>
   )
 }

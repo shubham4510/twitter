@@ -3,7 +3,7 @@ import { CiImageOn } from "react-icons/ci";
 
 const CreatePost = () => {
   return (
-    <div className="  border-[1px] border-gray-300">
+    <div className="  border-[1px] border-gray-200">
       <div>
         <div className="flex items-center justify-between px-3 py-2">
           <div className=" w-6/12 text-center cursor-pointer   hover:bg-gray-300 rounded-full">
@@ -20,7 +20,7 @@ const CreatePost = () => {
           <div>
             <Avatar
               className=" rounded-full"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCga-xdtUg1fK-RWZ_pOcouzCbVPCt72v_Zg&s"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWUem1ykMgZrm7P2GNRhID1fnipTWf1kQ1dA&s"
               twitterHandle="sitebase"
               size="40"
             />

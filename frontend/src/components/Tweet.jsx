@@ -6,11 +6,11 @@ import { FaRegBookmark } from "react-icons/fa";
 const Tweet = () => {
   return (
     <div className="">
-      <div className=" border-[1px] border-gray-300">
+      <div className=" border-[1px] border-gray-200">
         <div className=" flex p-4">
           <Avatar
             className=" rounded-full"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCga-xdtUg1fK-RWZ_pOcouzCbVPCt72v_Zg&s"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWUem1ykMgZrm7P2GNRhID1fnipTWf1kQ1dA&s"
             twitterHandle="sitebase"
             size="40"
           />
@@ -22,7 +22,9 @@ const Tweet = () => {
         </div>
 
         <div className=" ml-2">
-          <p>Do you have a pencil? Because I want to erase your past and write our future.</p>
+          <p>
+           Hello developers let's connect and grow together.
+          </p>
         </div>
 
         <div className=" p-3 flex justify-between">
@@ -30,23 +32,22 @@ const Tweet = () => {
             <div className=" p-1 hover:bg-green-200  rounded-full">
               <BiLike size={23} />
             </div>{" "}
-            <p>92</p>
+            <p>0</p>
           </div>
           <div className=" cursor-pointer flex items-center gap-1 ">
             <div className=" p-1 hover:bg-pink-200  rounded-full">
               <FaRegComment size={23} />
             </div>{" "}
-            <p>12</p>
+            <p>0</p>
           </div>
           <div className=" cursor-pointer flex items-center gap-1 ">
             <div className=" p-1 hover:bg-yellow-200  rounded-full">
               <FaRegBookmark size={23} />
             </div>{" "}
-            <p>2</p>
+            <p>0</p>
           </div>
         </div>
       </div>
-     
     </div>
   );
 };

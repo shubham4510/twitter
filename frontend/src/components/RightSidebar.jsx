@@ -21,7 +21,7 @@ const RightSidebar = () => {
             <div className=" flex gap-1">
               <Avatar
                 className=" rounded-full"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCga-xdtUg1fK-RWZ_pOcouzCbVPCt72v_Zg&s"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWUem1ykMgZrm7P2GNRhID1fnipTWf1kQ1dA&s"
                 twitterHandle="sitebase"
                 size="40"
               />
@@ -39,7 +39,7 @@ const RightSidebar = () => {
             <div className=" flex gap-1">
               <Avatar
                 className=" rounded-full"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCga-xdtUg1fK-RWZ_pOcouzCbVPCt72v_Zg&s"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWUem1ykMgZrm7P2GNRhID1fnipTWf1kQ1dA&s"
                 twitterHandle="sitebase"
                 size="40"
               />
