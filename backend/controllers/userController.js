@@ -126,6 +126,64 @@ exports.bookmark = async (req, res) => {
             });
         }
     } catch (error) {
-        console.log(error);
+        return res.status(500).json({
+            message:error.message,
+            success:false,
+        })
     }
 };
+
+exports.getMyProfile = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const user = await User.findById(id).select("-password");
+        return res.status(200).json({
+            user,
+        })
+    } catch (error) {
+        return res.status(500).json({
+            message:error.message
+        })
+    }
+};
+
+exports.getOtherUsers = async (req,res) =>{ 
+    try {
+         const {id} = req.params;
+         const otherUsers = await User.find({_id:{$ne:id}}).select("-password");
+         if(!otherUsers){
+            return res.status(401).json({
+                message:"Currently do not have any users."
+            })
+         };
+         return res.status(200).json({
+            otherUsers
+        })
+    } catch (error) {
+        return res.status(500).json({
+            message:error.message
+        })    }
+}
+
+exports.follow = async(req,res)=>{
+    try {
+        const loggedInUserId = req.body.id; 
+        const userId = req.params.id; 
+        const loggedInUser = await User.findById(loggedInUserId);//patel
+        const user = await User.findById(userId);//keshav
+        if(!user.followers.includes(loggedInUserId)){
+            await user.updateOne({$push:{followers:loggedInUserId}});
+            await loggedInUser.updateOne({$push:{following:userId}});
+        }else{
+            return res.status(400).json({
+                message:`User already followed to ${user.name}`
+            })
+        };
+        return res.status(200).json({
+            message:`${loggedInUser.name} just follow to ${user.name}`,
+            success:true
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}

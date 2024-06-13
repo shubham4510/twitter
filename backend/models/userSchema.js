@@ -26,6 +26,10 @@ const userSchema = ({
     following:{
         type:Array,
         default:[],
+    },
+    bookmarks:{
+        type:Array,
+        default:[],
     }
 });
 
