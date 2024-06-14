@@ -9,8 +9,8 @@ router.post("/login",Login)
 router.get("/logout",Logout)
 router.put("/bookmark/:id",isAuthenticated,bookmark)
 router.get("/profile/:id",isAuthenticated,getMyProfile)
-router.route("/otheruser/:id").get(isAuthenticated, getOtherUsers);
-router.route("/follow/:id").post(isAuthenticated, follow);
+router.get("/otheruser/:id",isAuthenticated, getOtherUsers)
+router.get("/follow/:id",isAuthenticated, follow)
 
 
 

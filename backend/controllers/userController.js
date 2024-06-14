@@ -184,6 +184,31 @@ exports.follow = async(req,res)=>{
             success:true
         })
     } catch (error) {
-        console.log(error);
-    }
+        return res.status(500).json({
+            message:error.message
+        })       }
+}
+
+exports.unfollow = async (req,res) => {
+    try {
+        const loggedInUserId = req.body.id; 
+        const userId = req.params.id; 
+        const loggedInUser = await User.findById(loggedInUserId);//patel
+        const user = await User.findById(userId);//keshav
+        if(loggedInUser.following.includes(userId)){
+            await user.updateOne({$pull:{followers:loggedInUserId}});
+            await loggedInUser.updateOne({$pull:{following:userId}});
+        }else{
+            return res.status(400).json({
+                message:`User has not followed yet`
+            })
+        };
+        return res.status(200).json({
+            message:`${loggedInUser.name} unfollow to ${user.name}`,
+            success:true
+        })
+    } catch (error) {
+        return res.status(500).json({
+            message:error.message
+        })       }
 }
